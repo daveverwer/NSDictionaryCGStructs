@@ -7,7 +7,7 @@ To store values into a NSMutableDictionary:
     [dictionary setSize:CGSizeMake(500, 600) forKey:@"sizeValue"];
     [dictionary setRect:CGRectMake(10, 20, 50, 60) forKey:@"rectValue"];
 
-To retrieve values from a NSMutableDictionary:
+To retrieve values from a NSDictionary:
 
     CGPoint point = [newDictionary pointForKey:@"pointValue"];
     CGSize size = [newDictionary sizeForKey:@"sizeValue"];
