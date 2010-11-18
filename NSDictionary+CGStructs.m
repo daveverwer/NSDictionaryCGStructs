@@ -35,20 +35,23 @@
 
 - (void)setPoint:(CGPoint)value forKey:(NSString *)key
 {
-  [self setValue:(NSDictionary *)CGPointCreateDictionaryRepresentation(value)
-          forKey:key];
+  NSDictionary *dictionary = (NSDictionary *)CGPointCreateDictionaryRepresentation(value);
+  [self setValue:dictionary forKey:key];
+  [dictionary release]; dictionary = nil;
 }
 
 - (void)setSize:(CGSize)value forKey:(NSString *)key
 {
-  [self setValue:(NSDictionary *)CGSizeCreateDictionaryRepresentation(value)
-          forKey:key];
+  NSDictionary *dictionary = (NSDictionary *)CGSizeCreateDictionaryRepresentation(value);
+  [self setValue:dictionary forKey:key];
+  [dictionary release]; dictionary = nil;
 }
 
 - (void)setRect:(CGRect)value forKey:(NSString *)key
 {
-  [self setValue:(NSDictionary *)CGRectCreateDictionaryRepresentation(value)
-          forKey:key];
+  NSDictionary *dictionary = (NSDictionary *)CGRectCreateDictionaryRepresentation(value);
+  [self setValue:dictionary forKey:key];
+  [dictionary release]; dictionary = nil;
 }
 
 @end
